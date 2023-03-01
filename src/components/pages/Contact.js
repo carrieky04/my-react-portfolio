@@ -1,50 +1,62 @@
-// import * as React from 'react';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import Box from '@mui/material/Box';
-// import Container from '@mui/material/Container';
-// import Typography from '@mui/material/Typography';
-
-// export default function SimpleContainer() {
-//   return (
-//     <React.Fragment>
-//       <CssBaseline />
-//       <Container maxWidth="sm">
-//         <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-//         <Typography>
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-//           fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-//           aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis.
-//         </Typography>
-//       </Container>
-//     </React.Fragment>
-//   );
-// }
 import { useForm } from "react-hook-form";
-import {FormContainer, TextFieldElement} from 'react-hook-form-mui'
+import {
+  FormContainer,
+  TextFieldElement,
+  TextareaAutosizeElement
+} from "react-hook-form-mui";
+import Button from '@mui/material/Button';
 
 export default function App() {
   const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
-   
+  const onSubmit = (data) => console.log(data);
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <FormContainer
-    defaultValues={{
-      name: '',
-    }}
-    onSuccess={onSubmit('submit')}
-  >
-    <TextFieldElement name={'name'} label={'Name'} required /> <br />
-    <TextFieldElement
-      name={'email'}
-      label={'Email'}
-      required
-      type={'email'}
-    />{' '}
-    <br />
-    <TextFieldElement name={'interest'} label={'Interest'} /> <br />
-    <SubComponent />
-  </FormContainer>
-    </form>
+
+// <form onSubmit={handleSubmit(onSubmit)}>
+//   <input {...register("firstName", { required: true, maxLength: 20 })} />
+//   <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
+//   <input type="number" {...register("age", { min: 18, max: 99 })} />
+//   <input type="submit" />
+// </form>
+
+    <FormContainer
+      defaultValues={{
+        name: "",
+      }}
+      // onSuccess={handleSubmit('submit')}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <TextFieldElement
+        name={"name"}
+        label={"Name"}
+        required
+        error
+          id="outlined-error-helper-text"
+          defaultValue="First, Last Name"
+          helperText="Incorrect entry."
+      />
+      <br />
+      <TextFieldElement
+        name={"email"}
+        label={"Email"}
+        required
+        type={"email"}
+        error
+        helperText={"This is a required field"}
+      />{" "}
+      <br />
+      <TextareaAutosizeElement
+        label="Message"
+        name="message"
+        required
+        error
+        helperText={"This is a required field"}
+      />
+      <br />
+      <Button type={'submit'} color={'primary'}>
+        Submit
+      </Button>
+    </FormContainer>
   );
 }
+
