@@ -1,7 +1,7 @@
 import "./App.css";
 import { Outlet } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import SimpleBottomNavigation from "./components/BottomNav";
+import NavBar from "./components/NavBar/NavBar";
+import SimpleBottomNavigation from "./components/Footer/BottomNav";
 
 function App() {
   return (
@@ -14,4 +14,3 @@ function App() {
 }
 
 export default App;
-

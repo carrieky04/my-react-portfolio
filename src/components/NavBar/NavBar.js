@@ -10,32 +10,27 @@
 
 // export default NavBar
 
-
-import * as React from 'react';
+import * as React from "react";
 // import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { navbarItems } from './items/navbarItems';
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { navbarItems } from "./items/navbarItems";
 import { useNavigate } from "react-router-dom";
-
-
 
 const drawerWidth = 240;
 // const navItems = ['About Me', 'Portfolio', 'Contact', 'Resume'];
-
-  
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -46,7 +41,7 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Carrie Young
       </Typography>
@@ -54,12 +49,13 @@ function DrawerAppBar(props) {
       {/* Nav Items */}
       <Divider />
       <List>
-        {navbarItems.map((item,index) => (
-          <ListItem 
-            key={item.id} 
+        {navbarItems.map((item, index) => (
+          <ListItem
+            key={item.id}
             onClick={() => navigate(item.route)}
-            disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            disablePadding
+          >
+            <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
@@ -68,11 +64,12 @@ function DrawerAppBar(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -81,23 +78,24 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             Carrie Young
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navbarItems.map((item, index) => (
-              <Button 
-                key={item.id} 
+              <Button
+                key={item.id}
                 onClick={() => navigate(item.route)}
-                sx={{ color: '#fff' }}>
+                sx={{ color: "#fff" }}
+              >
                 {item.label}
               </Button>
             ))}
@@ -114,8 +112,11 @@ function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
@@ -132,7 +133,5 @@ function DrawerAppBar(props) {
     </Box>
   );
 }
-
-
 
 export default DrawerAppBar;

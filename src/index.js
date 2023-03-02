@@ -7,10 +7,10 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import AboutMe from './components/pages/AboutMe';
-import Contact from './components/pages/Contact';
-import Portfolio from './components/pages/Portfolio';
-import Resume from './components/pages/Resume';
+import AboutMe from './pages/AboutMe/AboutMe';
+import Contact from './pages/Contact/Contact';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Resume from './pages/Resume/Resume';
 
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
