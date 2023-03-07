@@ -1,17 +1,4 @@
-// import * as React from 'react';
-
-// const NavBar = () => {
-//     return (
-//         <div>
-//             This is the navbar
-//         </div>
-//     )
-// }
-
-// export default NavBar
-
 import * as React from "react";
-// import PropTypes from 'prop-types';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -29,8 +16,8 @@ import Button from "@mui/material/Button";
 import { navbarItems } from "./items/navbarItems";
 import { useNavigate } from "react-router-dom";
 
+
 const drawerWidth = 240;
-// const navItems = ['About Me', 'Portfolio', 'Contact', 'Resume'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -41,7 +28,7 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Carrie Young
       </Typography>
