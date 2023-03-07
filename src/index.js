@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {
@@ -13,14 +13,8 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Resume from './pages/Resume/Resume';
 
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<App />}>
@@ -30,8 +24,21 @@ ReactDOM.render(
       <Route path="resume" element={<Resume />} />
     </Route>
   </Routes>
-</BrowserRouter>,
-document.getElementById('root')
+</BrowserRouter>
 );
+
+// ReactDOM.render(
+//   <BrowserRouter>
+//   <Routes>
+//     <Route path="/" element={<App />}>
+//       <Route path="about-me" element={<AboutMe />} />
+//       <Route path="contact" element={<Contact />} />
+//       <Route path="portfolio" element={<Portfolio />} />
+//       <Route path="resume" element={<Resume />} />
+//     </Route>
+//   </Routes>
+// </BrowserRouter>,
+// document.getElementById('root')
+// );
 
 
