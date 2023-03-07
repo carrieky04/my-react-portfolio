@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/my-react-portfolio/static/css/main.b6644ea7.css",
+    "main.js": "/my-react-portfolio/static/js/main.a15d3a92.js",
+    "static/media/HotelCalifornia.png": "/my-react-portfolio/static/media/HotelCalifornia.5fa1980c1adab4a4a1dc.png",
+    "static/media/Weather.png": "/my-react-portfolio/static/media/Weather.5e62f42a53b3d9accb45.png",
+    "static/media/Scheduler.png": "/my-react-portfolio/static/media/Scheduler.c2fa4b28ba5e35b04221.png",
+    "static/media/ProfilePic.png": "/my-react-portfolio/static/media/ProfilePic.87a828d617ceaf594b00.png",
+    "static/media/PwGen.png": "/my-react-portfolio/static/media/PwGen.3f0cff0107ce214d1f25.png",
+    "static/media/Giphtionary.png": "/my-react-portfolio/static/media/Giphtionary.aa987bd8bb863f7ea0c6.png",
+    "index.html": "/my-react-portfolio/index.html",
+    "main.b6644ea7.css.map": "/my-react-portfolio/static/css/main.b6644ea7.css.map",
+    "main.a15d3a92.js.map": "/my-react-portfolio/static/js/main.a15d3a92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6644ea7.css",
+    "static/js/main.a15d3a92.js"
+  ]
+}
