@@ -27,18 +27,4 @@ root.render(
 </BrowserRouter>
 );
 
-// ReactDOM.render(
-//   <BrowserRouter>
-//   <Routes>
-//     <Route path="/" element={<App />}>
-//       <Route path="about-me" element={<AboutMe />} />
-//       <Route path="contact" element={<Contact />} />
-//       <Route path="portfolio" element={<Portfolio />} />
-//       <Route path="resume" element={<Resume />} />
-//     </Route>
-//   </Routes>
-// </BrowserRouter>,
-// document.getElementById('root')
-// );
-
 

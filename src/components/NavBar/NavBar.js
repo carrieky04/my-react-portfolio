@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { navbarItems } from "./items/navbarItems";
 import { useNavigate } from "react-router-dom";
+import { navBarStyles } from "./styles";
 
 
 const drawerWidth = 240;
@@ -58,7 +59,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={navBarStyles.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -112,9 +113,7 @@ function DrawerAppBar(props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         {/* <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis 
+          Welcome to my portfolio!
         </Typography> */}
       </Box>
     </Box>

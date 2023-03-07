@@ -149,27 +149,4 @@ export default function ActionAreaCard() {
       ))}
     </Card>
   );
-  // return (
-  //   <Card sx={{ maxWidth: 345 }}>
-  //     <CardActionArea>
-  //       <CardMedia
-  //         component="img"
-  //         height="140"
-  //         image={HotelCalifornia}
-  //       />
-  //       <CardContent>
-  //         <Typography gutterBottom variant="h5" component="div">
-  //           Hotel California
-  //         </Typography>
-  //         <Typography variant="body2" color="text.secondary">
-  //           An application designed for hotel guests, where one can easily check in/out, make a reservation, and view local entertainment options.
-  //           <br />
-  //         <Link href="https://hotel-california-app.herokuapp.com/" color="inherit">View App</Link>
-  //         <br />
-  //         <Link href="https://github.com/kas500/hotel-california-app" color="inherit">Git Hub</Link>
-  //         </Typography>
-  //       </CardContent>
-  //     </CardActionArea>
-  //   </Card>
-  // );
 }

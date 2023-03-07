@@ -7,7 +7,6 @@ export const formStyles = {
         },
       
       form: {
-        //   backgroundColor: 'pale green',
           padding: '10px',
           borderRadius: '20px'
       },
