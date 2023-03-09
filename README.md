@@ -6,7 +6,6 @@
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
@@ -16,7 +15,7 @@
 
 ## Installation
 click on the link below to view my portfolio:
-[My Portfolio]
+[My Portfolio](https://carrieky04.github.io/my-react-portfolio/)
 
 
 ## Credits
