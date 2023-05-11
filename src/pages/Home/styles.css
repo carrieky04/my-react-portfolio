@@ -1,32 +1,43 @@
-.home {
-    width: 100%;
-    align-items: center;
-    font-family: "Arial", sans-serif;
-    color: #3e497a;
-  }
+body {
+  background-image: url(../../images/brain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #e6d0c3;
+}
 
-  .about {
-    overflow: visible;
-    width: 100%;
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* background-color: #21325e; */
-    background-image: url(../../images/brain.jpg);
-    background-size: cover;
-    color: #272932;
-  }
-  .about h2 {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 80px;
-    color: #272932;
-    height: 50px;
-  }
+.home {
+  width: 100%;
+  align-items: center;
+}
+
+.about {
+  overflow: visible;
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   
-  .about .prompt {
-    width: 40%;
-    font-size: 30px;
-  }
+}
+.about h2 {
+  font-size: 80px;
+  color: #272932;
+  height: 100px;
+}
+
+.about .prompt {
+  width: 50%;
+  font-size: 30px;
+}
+
+.prompt p {
+  font-size: 40px;
+  color: #272932;
+  height: 500px;
+  text-shadow: 2px 2px 4px #ffffff;
+}

@@ -29,7 +29,7 @@ export default function SimpleBottomNavigation() {
         sx={footerStyles.link}
           href="https://github.com/carrieky04?tab=repositories"
           label="Git Hub"
-          color="disabled"
+          color="success"
           icon={<GitHubIcon />}
         />
 
