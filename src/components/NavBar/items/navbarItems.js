@@ -6,7 +6,7 @@ export const navbarItems = [
     },
     {
         id: 1,
-        label: 'AboutMe',
+        label: 'About Me',
         route: 'about-me',
     },
     {

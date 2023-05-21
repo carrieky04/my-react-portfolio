@@ -5,12 +5,16 @@ import Contact from "./pages/Contact/Contact";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Resume from "./pages/Resume/Resume";
 import DrawerAppBar from "./components/NavBar/DrawerAppBar";
-import SimpleBottomNavigation from "./components/Footer/SimpleBottomNavigation";
+import SocialLinks from "./components/Footer/SocialLinks";
+// import React, {useState} from "react";
+
+
 
 
 function App() {
+ 
   return (
-    <div className="App">
+    <div className="App" >
       <BrowserRouter basename={window.location.pathname || ""}>
         <DrawerAppBar />
         <Routes>
@@ -20,7 +24,7 @@ function App() {
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="resume" element={<Resume />} />
         </Routes>
-        {/* <SimpleBottomNavigation /> */}
+        <SocialLinks />
       </BrowserRouter>
     </div>
   );

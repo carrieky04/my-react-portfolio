@@ -36,48 +36,7 @@ export default function ActionAreaCard() {
         </Link>
       ),
     },
-    {
-      image: <CardMedia component="img" height="140" image={Giphtionary} />,
-      title: "Giphtionary",
-      text: "Where words meets gifs. A vanilla JS app to look up word definitions that displays it's complementary GIF.",
-      app: (
-        <Link
-          href="https://thebluwiz.github.io/Giphtionary/"
-          color="inherit"
-        >
-          View App
-        </Link>
-      ),
-      github: (
-        <Link
-          href="https://github.com/TheBluWiz/Giphtionary"
-          color="inherit"
-        >
-          Git Hub
-        </Link>
-      ),
-    },
-    {
-      image: <CardMedia component="img" height="140" image={PwGen} />,
-      title: "Password Generator",
-      text: "The password generators allows a user to hoose from certain character criteria and it will spit out a password between 8-128 characters.",
-      app: (
-        <Link
-          href="https://carrieky04.github.io/Password-Generator/"
-          color="inherit"
-        >
-          View App
-        </Link>
-      ),
-      github: (
-        <Link
-          href="https://github.com/carrieky04/Password-Generator"
-          color="inherit"
-        >
-          Git Hub
-        </Link>
-      ),
-    },
+  
     {
       image: <CardMedia component="img" height="140" image={Scheduler} />,
       title: "Work Day Scheduler",
@@ -99,41 +58,16 @@ export default function ActionAreaCard() {
         </Link>
       ),
     },
-    {
-      image: <CardMedia component="img" height="140" image={Weather} />,
-      title: "Weather Dashboard",
-      text: "This weather app allows users to search any city in the world and it will provide them with the current and upcoming 5 day forecast.",
-      app: (
-        <Link
-          href="https://carrieky04.github.io/Weather-Dashboard/"
-          color="inherit"
-        >
-          View App
-        </Link>
-      ),
-      github: (
-        <Link
-          href="https://github.com/carrieky04/Weather-Dashboard"
-          color="inherit"
-        >
-          Git Hub
-        </Link>
-      ),
-    },
-    {
-      image: <CardMedia component="img" height="140" image="COMING SOON!" />,
-      title: "Endoscopy Procedure",
-      text: "Currently working on an app for patients who are going to be getting an endoscopy. The app will provide education for all types of endoscopies, pre-op and post op instructions, arrival time, and approximate time of stay at hospital. "
-    },
+    
     
     
   ]);
   return (
-    <Card >
+    <Card sx={portfolioStyles.card}>
       {cards.map((card, i) => (
-        <CardActionArea key={i} sx={portfolioStyles.card} >
+        <CardActionArea key={i}  >
           {card.image}
-          <CardContent>
+          <CardContent >
             <Typography gutterBottom variant="h5" component="div">
               {card.title}
             </Typography>

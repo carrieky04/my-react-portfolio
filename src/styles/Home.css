@@ -1,5 +1,5 @@
 body {
-  background-image: url(../../images/brain.jpg);
+  background-image: url(../images/brain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -9,13 +9,13 @@ body {
 }
 
 .home {
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
 }
 
 .about {
-  overflow: visible;
-  width: 100%;
+  /* overflow: visible; */
+  /* width: 100%; */
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ body {
 }
 
 .about .prompt {
-  width: 50%;
+  /* width: 50%; */
   font-size: 30px;
 }
 
@@ -40,4 +40,16 @@ body {
   color: #272932;
   height: 500px;
   text-shadow: 2px 2px 4px #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
+  }
 }

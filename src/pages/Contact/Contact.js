@@ -1,57 +1,50 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import {
-  FormContainer,
-  TextFieldElement,
-  TextareaAutosizeElement,
-} from "react-hook-form-mui";
-import Button from "@mui/material/Button";
-import { formStyles } from "./styles";
+import "../../styles/Contact.css";
 
 export default function App() {
   const {
     register,
-    handleSubmit,
     formState: { errors },
+    // handleSubmit,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  // const onSubmit = (data) => console.log(data);
   console.log(errors);
 
   return (
-    <FormContainer sx={formStyles.app} onSubmit={handleSubmit(onSubmit)}>
-      <TextFieldElement
-        type="text"
-        placeholder="First name"
-        errorMessage="This field is required"
-        {...register("First name", { required: true, maxLength: 80 })}
-      />
-      <br />
-      <TextFieldElement
-      sx={formStyles.form}
-        type="text"
-        placeholder="Last name"
-        errorMessage="This field is required"
-        {...register("Last name", { required: true, maxLength: 100 })}
-      />
-      <br />
-      <TextFieldElement
-        type="text"
-        placeholder="Email"
-        errorMessage="This field is required"
-        {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
-      />
-      <br />
-      <TextareaAutosizeElement
-        {...register("Message", { required: true, min: 5, maxLength: 100 })}
-        placeholder="enter a message"
-        sx={formStyles.form}
-      />
-      <br />
-
-      <Button type={"submit"} color={"primary"} sx= {formStyles.button}>
-        Submit
-      </Button>
-
-    </FormContainer>
+    <div className="contact-form">
+      <form
+        action="https://getform.io/f/0dfe046c-1aeb-4129-8f85-5dcaf7cce74a"
+        method="POST"
+        // onSubmit={handleSubmit(onSubmit)}
+      >
+        <h1 className="contact-title">Contact Me</h1>
+        <input
+          placeholder="Full Name"
+          type="text"
+          name="name"
+          {...register("fullName", { required: true })}
+          aria-invalid={errors.fullName ? "true" : "false"}
+        />
+        {errors.fullName?.type === "required" && (
+          <p role="alert">Full Name is required</p>
+        )}
+        <br />
+        <input
+          placeholder="Email"
+          type="email"
+          name="email"
+          {...register("email", { required: "Email Address is required" })}
+          aria-invalid={errors.email ? "true" : "false"}
+        />
+        {errors.email && <p role="alert">{errors.email?.message}</p>}
+        <br />
+        <textarea placeholder="Message" rows="10" name="message" />
+        <br />
+        <button type="submit" variant="contained" className="contact-button">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

@@ -1,11 +1,14 @@
 export const portfolioStyles = {
     card: {
-        maxWidth: '100vh',
+        maxWidth: '25%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         alignContent: 'center',
-        padding: '50px',
+        padding: '2%',
+        margin: '2%',
+        borderColor: 'black',
+        borderStyle: 'solid'
     }
 }
